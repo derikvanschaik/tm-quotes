@@ -33,7 +33,6 @@
   text-align: center;
 }
 
-
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
@@ -49,7 +48,8 @@
   margin-top: 3rem;
 }
 
-.card {
+.card,
+.quote {
   margin: 1rem;
   flex-basis: 45%;
   padding: 1.5rem;
@@ -79,6 +79,12 @@
   line-height: 1.5;
 }
 
+.quote p {
+  font-size: 1.35rem;
+  font-style: italic;
+  color: rgb(103, 99, 99);
+}
+
 .logo {
   height: 1em;
 }
@@ -88,4 +94,28 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+/* navbar */
+
+.logo a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 10px;
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
 }

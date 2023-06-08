@@ -1,6 +1,16 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
+// export async function getStaticProps() {
+//   const resp = await fetch("https://zenquotes.io/api/quotes")
+//   const data = await resp.json()
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// }
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -11,11 +21,11 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Quotes are us
         </h1>
 
         <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+          all the quotes.
         </p>
 
         <div className={styles.grid}>
@@ -96,7 +106,7 @@ export default function Home() {
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
       `}</style>
-
+{/* 
       <style jsx global>{`
         html,
         body {
@@ -109,7 +119,7 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
-      `}</style>
+      `}</style>  */}
     </div>
   )
 }
