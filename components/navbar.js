@@ -8,7 +8,7 @@ export default function Navbar({ }){
           <div className={styles.logo}>
             <Link href="/">Xen quotes</Link>
           </div>
-          <ul className={styles.navLinks}>
+          <ul className={styles['nav-links']}>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/quotes">Quotes</Link></li>
           </ul>

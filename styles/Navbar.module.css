@@ -1,14 +1,17 @@
 .header {
-  background-color: #f2f2f2;
+  /* padding: 0.5em; */
+  font-size: 1.2rem;
+  border-bottom: #333 solid 0.2rem;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
 }
 .logo a {
+  padding-left: 2em;
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
@@ -18,11 +21,21 @@
 .nav-links {
   list-style: none;
   display: flex;
+  flex-direction: row;
+  padding-right: 2em;
 }
 
 .nav-links li {
   margin-left: 10px;
-  display: inline;
+  /* display: inline; */
+  font-size: 1.2rem;
+  padding: 1em;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.nav-links li:hover {
+  background-color: rgb(235, 230, 230);
+  opacity: 1;
 }
 
 .nav-links a {
