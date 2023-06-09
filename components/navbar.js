@@ -1,9 +1,18 @@
 import styles from '../styles/Navbar.module.css';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Navbar({ }){
+    const router = useRouter();
     const [open, setOpen] = useState(false);
+
+    // when user uses mobile nav bar to navigate, 
+    // should be set to false so doesn't stay open on
+    // same page
+    useEffect(() =>{
+        setOpen(false);
+    }, [router.pathname]);
 
     const toggleMobileNavbar = () =>{
         setOpen(!open);
