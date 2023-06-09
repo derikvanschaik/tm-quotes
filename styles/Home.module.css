@@ -49,6 +49,7 @@
 }
 
 .card,
+.card-selected,
 .quote {
   list-style: none;
   margin: 1rem;
@@ -69,12 +70,27 @@
   border-color: #0070f3;
 }
 
+.card-selected {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
 .card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+.card-selected h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
 
 .card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.card-selected p {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;

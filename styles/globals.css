@@ -53,3 +53,13 @@ dialog::backdrop {
   background-color: black;
   opacity: 0.3;
 }
+a {
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+a:hover {
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
+}
