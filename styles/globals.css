@@ -33,6 +33,23 @@ ul {
 }
 
 button {
-  padding: 0.5rem 1rem;
+  padding: 0.9rem 2rem;
   font-weight: bold;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: inherit;
+  font-size: 0.8rem;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+dialog {
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+}
+
+dialog::backdrop {
+  /* backdrop-filter: blur(3px); */
+  background-color: black;
+  opacity: 0.3;
 }
