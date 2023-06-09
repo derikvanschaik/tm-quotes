@@ -12,16 +12,18 @@
 }
 .logo a {
   padding-left: 2em;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 2rem;
+  /* font-weight: bold; */
   text-decoration: none;
   color: #333;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
   flex-direction: row;
+  list-style: none;
+  /* display: flex; */
+  /* flex-direction: row; */
   padding-right: 2em;
 }
 
@@ -41,4 +43,40 @@
 .nav-links a {
   text-decoration: none;
   color: #333;
+}
+.hamburger {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+.nav-links-mobile li {
+  padding: 1em;
+}
+
+@media (max-width: 767px) {
+  /* Show the hamburger icon on screens smaller than 768px */
+  .hamburger {
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+  .nav-links {
+    flex-direction: column;
+    display: none;
+  }
+  .nav {
+    justify-content: space-around;
+  }
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 1em;
+  }
 }
