@@ -15,6 +15,15 @@ export default function Background({open, activeIdx, backgrounds, handleSetBackg
               )
             })
           }
+        <style jsx>{`
+            @media screen and (max-width: 768px) {
+              div {
+                height: 300px; /* Adjust the height as needed */
+                overflow: scroll;
+              }
+            }
+        `}
+        </style>
       </div>
       :
       null
