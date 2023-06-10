@@ -1,15 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-
-// export async function getStaticProps() {
-//   const resp = await fetch("https://zenquotes.io/api/quotes")
-//   const data = await resp.json()
-//   return {
-//     props: {
-//       data,
-//     },
-//   };
-// }
+import Link from 'next/link';
+import Dialog from '../components/icons/dialog';
 
 export default function Home() {
   return (
@@ -21,39 +13,40 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Quotes are us
+          XEN Quotes
         </h1>
 
         <p className={styles.description}>
-          all the quotes.
+          <Dialog />
+          Instant Words of Inspiration.
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Link href="/authors/browse" className={styles.card}>
+            <h3>Authors &rarr;</h3>
+            <p>Browse our expansive list of famous authors.</p>
+          </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Link href="/quotes" className={styles.card}>
+            <h3>Quotes &rarr;</h3>
+            <p>Browse our expansive list of famous quotes.</p>
+          </Link>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h3>Subscribe &rarr;</h3>
+            <p>Subscribe to receive a quote emailed directly.</p>
           </a>
 
           <a
             href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>Contact &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Get in touch to schedule a 30 minute zoom meeting.
             </p>
           </a>
         </div>
@@ -65,8 +58,6 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
       </footer>
 

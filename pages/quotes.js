@@ -1,23 +1,21 @@
 // import Head from 'next/head';
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import styles from '../styles/Home.module.css';
 import Quote from '../components/quote';
 import QuoteModal from '../components/quoteModal';
+import quotesService  from '../utils/api/quotes'
 
-async function getQuotes(){
-    const resp = await fetch("https://zenquotes.io/api/quotes",
-    {
-        mode: 'no-cors',
-        headers: {
-            "Content-Type": "application/json"
-       }
-    })
-    const data = await resp.json()
-    return data
-}
+export async function getServerSideProps(context) {
+  const { query } = context;
+  const author = query.author;
+  let data;
 
-export async function getStaticProps() {
-  const data = await getQuotes()
+  if (author) {
+    data = quotesService.getQuotesByAuthor(author);
+  }else{
+    data = quotesService.getQuotes();
+  }
+
   return {
     props: {
       data,
