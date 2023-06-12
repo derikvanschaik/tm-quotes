@@ -59,6 +59,12 @@ export default function Author({ data }) {
             align-items: center;
             justify-content: space-around;
           }
+          @media (max-width: 768px) {
+            .author-header {
+              flex-direction: column;
+            }
+          }
+          
 
         `}</style>
     </div>
